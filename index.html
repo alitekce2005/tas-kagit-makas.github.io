@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/taskagitmakas-Photoroom.png" type="image/png">
+    <title>Taş Kağıt Makas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="cyber-particles" id="cyberParticles"></div>
+    <div class="energy-lines" id="energyLines"></div>
+
+    <div class="header">
+        <h1>🎮 TAŞ KAĞIT MAKAS 🎮</h1>
+        <div class="scoreboard">
+            <div class="score">
+                <h3>SEN</h3>
+                <div class="score-number" id="playerScore">0</div>
+            </div>
+            <div class="vs">VS</div>
+            <div class="score">
+                <h3>BİLGİSAYAR</h3>
+                <div class="score-number" id="computerScore">0</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="game-area">
+        <div class="player-section">
+            <h3 class="player-title">SENİN SEÇİMİN</h3>
+            <div class="choice-display" id="playerChoice">
+                <img class="choice-image card-cycling" id="playerImage" alt="Seçim">
+            </div>
+        </div>
+
+        <div class="player-section">
+            <h3 class="player-title">BİLGİSAYARIN SEÇİMİ</h3>
+            <div class="choice-display" id="computerChoice">
+                <img class="choice-image card-cycling" id="computerImage" alt="Bilgisayar seçimi">
+            </div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button class="choice-btn" onclick="makeChoice(1)">
+            <img id="rockBtn" alt="Taş">
+            <span>TAŞ</span>
+        </button>
+        <button class="choice-btn" onclick="makeChoice(2)">
+            <img id="paperBtn" alt="Kağıt">
+            <span>KAĞIT</span>
+        </button>
+        <button class="choice-btn" onclick="makeChoice(3)">
+            <img id="scissorsBtn" alt="Makas">
+            <span>MAKAS</span>
+        </button>
+    </div>
+
+    <div class="result" id="result">
+        <div class="result-text">Bir seçim yapın!</div>
+    </div>
+
+    <div class="action-buttons"
+        style="display: flex; gap: 10px; flex-direction: column; align-items: center; margin-bottom: 20px;">
+        <button class="finish-btn" onclick="finishAndClaim()">💰 OYUNU BİTİR VE KAZANCINI AL</button>
+        <button class="reset-btn" onclick="resetGame()">SKORU SIFIRLA</button>
+    </div>
+
+</body>
+<script src="main.js"></script>
+
+</html>
